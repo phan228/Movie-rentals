@@ -1,0 +1,17 @@
+{
+  "childrens": {
+    "price": 1,
+    "point": 1,
+    "deleted": false
+  },
+  "regular": {
+    "price": 1.5,
+    "point": 1,
+    "deleted": false
+  },
+  "new": {
+    "price": 3,
+    "point": 2,
+    "deleted": false
+  }
+}
