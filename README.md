@@ -27,7 +27,7 @@ Note that `import { statement } from "./html-statement";` should be included in 
 ## Tradeoffs and future improvements:
   
 - No longer use enum MovieCode due to the inflexibility of adding/deleting enums dynamically during runtime.
-- Currently, the program has separate json files for price/point/baseprice/etc in a key-value pair format with the movie classifications as keys. This is for ease of access at the moment due to my limited knowledge of reading from/writing to nested json files. I'd like to have one json file with all information related to movie classifications.
+- Currently, the program has separate json files for price/point/baseprice/etc in a key-value pair format with the movie classifications as keys. This is for ease of access at the moment due to my limited knowledge of reading from/writing to nested json files. I'd like to have one json file with all information related to movie classifications in the future.
   
   
   
