@@ -11,7 +11,7 @@ Note: Install edit-json-file using `npm install --save edit-json-file` before ru
 
 #### How to run: `npm run html-statement`
 
-Note that `import { statement } from "./html-statement";` should be included in `index.ts` for the right script to run.
+Note: un-comment `import { statement } from "./html-statement";` and `.action(() => console.log(statement(customer, movies)));` in `index.ts` for the right script to run.
 
 
 ## Flexible statement:
@@ -30,4 +30,5 @@ Note that `import { statement } from "./html-statement";` should be included in 
 - Currently, the program has separate json files for price/point/baseprice/etc in a key-value pair format with the movie classifications as keys. This is for ease of access at the moment due to my limited knowledge of reading from/writing to nested json files. I'd like to have one nested json file with all information related to movie classifications in the future.
 - When a movie classification is deleted, instead of deleting whole record, its deleted flag is set to true to prevent incorrectly calculating the total amount owed. For future development, I'd like to add a feature where users will not be able to rent movies from any deleted classifications.
   
-  
+
+*Estimated time spent on this project: 6 hours*
