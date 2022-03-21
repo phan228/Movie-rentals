@@ -42,24 +42,27 @@ export const statement = (customer: any, movies: any, json: any): string => {
                 break;
             case 'add':         // add a movie classification
                 let toAdd = myArgs.slice(1,);
-                if (toAdd.length != 3) {
-                    return `Please use format -- add <movie classification> <price> <point>`;
+                if (toAdd.length != 4) {
+                    return `Please use format -- add <movie classification> <price> <baseprice> <point>`;
                 }
 
                 let Classification = toAdd[0];
                 let pr = parseInt(toAdd[1]);
-                let pnt = parseInt(toAdd[2]);
+                let basepr = parseInt(toAdd[2]);
+                let pnt = parseInt(toAdd[3]);
 
                 if (!deletedMap.has(Classification)) {                    
                     priceMap.set(Classification, pr);
+                    initialPriceMap.set(Classification, basepr);
                     pointMap.set(Classification, pnt);
+                    daysAfterMap.set(Classification, 0);
                 }
                 deletedMap.set(Classification, false);                
                 break;
             case 'change':          // change a movie pricing or point    
                 let toChange = myArgs.slice(1, );
                 if (toChange.length != 3) {
-                    return `Please use format -- change <movie classification> <price/point/baseprice> <value>`;
+                    return `Please use format -- change <movie classification> <price/point/baseprice/day> <value>`;
                 }
 
                 let classification = toChange[0];
@@ -75,6 +78,9 @@ export const statement = (customer: any, movies: any, json: any): string => {
                     }
                     else if (key === 'baseprice') {
                         initialPriceMap.set(classification, value);
+                    }
+                    else if (key === 'day') {
+                        daysAfterMap.set(classification, value);
                     }
                     else {
                         return `Invalid! Available changes: price, point, baseprice`;
@@ -113,7 +119,7 @@ export const statement = (customer: any, movies: any, json: any): string => {
     let deletedJson = Object.fromEntries(deletedMap);
     let initialPriceJson = Object.fromEntries(initialPriceMap);
     let daysJson = Object.fromEntries(daysAfterMap);
-    console.log(priceJson);
+    //console.log(daysAfterMap);
     
     // write to json files
     const fs = require('fs');
