@@ -4,6 +4,7 @@ import { Customer } from "./Customer";
 import { MovieCollection } from "./Movie";
 
 import { Command } from "commander";
+//import { statement } from "./html-statement";
 import { statement } from "./flexible-statement";
 
 const program: Command = require("commander");
@@ -20,6 +21,7 @@ program
 program
   .command("statement")
   .description("Prints out a plain-text statement for the customer")
-  .action(() => console.log(statement(customer, movies, json)));
+  //.action(() => console.log(statement(customer, movies)));				// for html-statement
+  .action(() => console.log(statement(customer, movies, json)));		// for flexible-statement
 
 program.parse(process.argv);
