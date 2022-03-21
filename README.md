@@ -28,7 +28,7 @@ Note: un-comment `import { statement } from "./html-statement";` and `.action(()
   
 - No longer use enum MovieCode due to the inflexibility of adding/deleting enums dynamically during runtime.
 - Currently, the program has separate json files for price/point/baseprice/etc in a key-value pair format with the movie classifications as keys. This is for ease of access at the moment due to my limited knowledge of reading from/writing to nested json files. I'd like to have one nested json file with all information related to movie classifications in the future.
-- When a movie classification is deleted, instead of deleting whole record, its deleted flag is set to true to prevent incorrectly calculating the total amount owed. For future development, I'd like to add a feature where users will not be able to rent movies from any deleted classifications.
+- When a movie classification is deleted, instead of deleting the whole record, its deleted flag is set to true to prevent incorrect calculation of the total amount owed. For future development, I'd like to add a feature where users will not be able to rent movies from any deleted classifications.
   
 
 *Estimated time spent on this project: 6 hours*
