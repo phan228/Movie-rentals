@@ -22,7 +22,7 @@ Note: un-comment `import { statement } from "./html-statement";` and `.action(()
   
   - To delete movie classification(s): -- *delete <movie classification 1> <movie classification 2> ...* (Example: *npm run flexible-statement -- delete childrens*    will set childrens' deleted variable to true and prevent renters from renting from this category in the future - TODO)
   - To add a movie classification: -- *add \<movie classification\> \<price\> \<baseprice\> \<point\>* (Example: *npm run flexible-statement -- add PG13 2 1 1*    will add PG13 with price $2, baseprice $1, and 1 renter point to the database)
-  - To make changes to a movie classification price/baseprice/point/day to start charging: -- *change <movie classification> <price/baseprice/point/day> \<value\>*
+  - To make changes to a movie classification price/baseprice/point/day to start charging daily fees after baseprice: -- *change <movie classification> <price/baseprice/point/day> \<value\>*
   
 ## Tradeoffs and future improvements:
   
